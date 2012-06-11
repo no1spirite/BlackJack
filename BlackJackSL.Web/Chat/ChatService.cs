@@ -4,8 +4,11 @@ using System.Threading;
 
 namespace BlackJackSL.Web.Chat
 {
+    using System.ServiceModel.Activation;
+
     public class ChatServiceFactory : DuplexServiceFactory<ChatService> {}
 
+    [AspNetCompatibilityRequirements(RequirementsMode = AspNetCompatibilityRequirementsMode.Allowed)]
     public class ChatService : DuplexService
     {
         //Base class (DuplexService) keeps track of all connected chatters

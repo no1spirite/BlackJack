@@ -1,1 +1,8 @@
-﻿<configuration />
+﻿<?xml version="1.0"?>
+<!-- For more information on using web.config transformation visit http://go.microsoft.com/fwlink/?LinkId=125889 -->
+<configuration xmlns:xdt="http://schemas.microsoft.com/XML-Document-Transform">
+    <appSettings>
+        <add key="ServiceURI" value="http://localhost/Chat/ChatService.svc"
+             xdt:Transform="SetAttributes" xdt:Locator="Match(key)" />
+    </appSettings>
+</configuration>
