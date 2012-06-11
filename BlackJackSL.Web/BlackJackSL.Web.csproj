@@ -73,6 +73,7 @@
     <Content Include="BlackJackSLTestPage.html" />
     <Content Include="BlackJack\BlackJackService.svc" />
     <Content Include="Chat\ChatService.svc" />
+    <Content Include="clientaccesspolicy.xml" />
     <Content Include="ClientBin\BlackJackSL.xap" />
     <Content Include="Default.aspx" />
     <Content Include="Silverlight.js" />
@@ -119,12 +120,11 @@
     <VisualStudio>
       <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
         <WebProjectProperties>
-          <UseIIS>False</UseIIS>
+          <UseIIS>True</UseIIS>
           <AutoAssignPort>False</AutoAssignPort>
           <DevelopmentServerPort>57957</DevelopmentServerPort>
           <DevelopmentServerVPath>/</DevelopmentServerVPath>
-          <IISUrl>
-          </IISUrl>
+          <IISUrl>http://localhost/BlackJackSL.Web</IISUrl>
           <NTLMAuthentication>False</NTLMAuthentication>
           <UseCustomServer>False</UseCustomServer>
           <CustomServerUrl>
