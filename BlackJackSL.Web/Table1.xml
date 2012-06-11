@@ -3,7 +3,6 @@
   <Players>
   </Players>
   <Dealer>
-    <DealerCards>
-    </DealerCards>
+    <DealerCards />
   </Dealer>
 </Table>

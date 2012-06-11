@@ -15,12 +15,12 @@ namespace BlackJackSL.Web.BlackJack.XML
     public class XmlWriter
     {
         ReaderWriterLock rwl = new ReaderWriterLock();
+        string filename = @"/Table1.xml";
         public XmlWriter()
         {
-            string filename = AppDomain.CurrentDomain.BaseDirectory.ToString() + @"/Table1.xml";
+            //string filename = AppDomain.CurrentDomain.BaseDirectory.ToString() + @"/Table1.xml";
 
             XmlDocument xmlDoc = new XmlDocument();
-
             try
             {
                 xmlDoc.Load(filename);
@@ -45,7 +45,7 @@ namespace BlackJackSL.Web.BlackJack.XML
         public void PlayerAdded(AddPlayerMessageToServer msg)
         {
             rwl.AcquireWriterLock(10000);
-            string filename = AppDomain.CurrentDomain.BaseDirectory.ToString() + @"/Table1.xml";
+            //string filename = AppDomain.CurrentDomain.BaseDirectory.ToString() + @"/Table1.xml";
             XmlDocument xmlDoc = new XmlDocument();
             xmlDoc.Load(filename);
             XmlNode root = xmlDoc.DocumentElement;
@@ -70,7 +70,7 @@ namespace BlackJackSL.Web.BlackJack.XML
         public void PlayerRemoved(RemovePlayerMessageToServer msg)
         {
             rwl.AcquireWriterLock(10000);
-            string filename = AppDomain.CurrentDomain.BaseDirectory.ToString() + @"/Table1.xml";
+            //string filename = AppDomain.CurrentDomain.BaseDirectory.ToString() + @"/Table1.xml";
             XmlDocument xmlDoc = new XmlDocument();
             xmlDoc.Load(filename);
             XmlNode root = xmlDoc.DocumentElement;
@@ -84,7 +84,7 @@ namespace BlackJackSL.Web.BlackJack.XML
         public void PlayersRemoved(LeaveGameMessageFromServer msg)
         {
             rwl.AcquireWriterLock(10000);
-            string filename = AppDomain.CurrentDomain.BaseDirectory.ToString() + @"/Table1.xml";
+            //string filename = AppDomain.CurrentDomain.BaseDirectory.ToString() + @"/Table1.xml";
             XmlDocument xmlDoc = new XmlDocument();
             xmlDoc.Load(filename);
             XmlNode root = xmlDoc.DocumentElement;
@@ -100,7 +100,7 @@ namespace BlackJackSL.Web.BlackJack.XML
         public void PlayersRemoved(ClearPlayersMessageToServer msg)
         {
             rwl.AcquireWriterLock(10000);
-            string filename = AppDomain.CurrentDomain.BaseDirectory.ToString() + @"/Table1.xml";
+            //string filename = AppDomain.CurrentDomain.BaseDirectory.ToString() + @"/Table1.xml";
             XmlDocument xmlDoc = new XmlDocument();
             xmlDoc.Load(filename);
             XmlNode root = xmlDoc.DocumentElement;
@@ -121,7 +121,7 @@ namespace BlackJackSL.Web.BlackJack.XML
         public void PlayerBet(BetMessageToServer msg)
         {
             rwl.AcquireWriterLock(10000);
-            string filename = AppDomain.CurrentDomain.BaseDirectory.ToString() + @"/Table1.xml";
+            //string filename = AppDomain.CurrentDomain.BaseDirectory.ToString() + @"/Table1.xml";
             XmlDocument xmlDoc = new XmlDocument();
             xmlDoc.Load(filename);
             XmlNode root = xmlDoc.DocumentElement;
@@ -136,7 +136,7 @@ namespace BlackJackSL.Web.BlackJack.XML
         public void DealCards(Deck deck)
         {
             rwl.AcquireWriterLock(10000);
-            string filename = AppDomain.CurrentDomain.BaseDirectory.ToString() + @"/Table1.xml";
+            //string filename = AppDomain.CurrentDomain.BaseDirectory.ToString() + @"/Table1.xml";
             XmlDocument xmlDoc = new XmlDocument();
             xmlDoc.Load(filename);
             XmlNodeList players = xmlDoc.SelectNodes("/Table/Players/Player");
@@ -168,7 +168,7 @@ namespace BlackJackSL.Web.BlackJack.XML
         public void PlayerHit(HitMessageToServer msg, Deck deck)
         {
             rwl.AcquireWriterLock(10000);
-            string filename = AppDomain.CurrentDomain.BaseDirectory.ToString() + @"/Table1.xml";
+            //string filename = AppDomain.CurrentDomain.BaseDirectory.ToString() + @"/Table1.xml";
             XmlDocument xmlDoc = new XmlDocument();
             xmlDoc.Load(filename);
             XmlNode hand = xmlDoc.SelectSingleNode("/Table/Players/Player[@PlayerId='" + msg.playerId + "']/Hands/Hand[@HandId='"+ msg.handId +"']");
@@ -185,7 +185,7 @@ namespace BlackJackSL.Web.BlackJack.XML
         public void PlayerDouble(DoubleMessageToServer msg, Deck deck)
         {
             rwl.AcquireWriterLock(10000);
-            string filename = AppDomain.CurrentDomain.BaseDirectory.ToString() + @"/Table1.xml";
+            //string filename = AppDomain.CurrentDomain.BaseDirectory.ToString() + @"/Table1.xml";
             XmlDocument xmlDoc = new XmlDocument();
             xmlDoc.Load(filename);
             XmlNode hand = xmlDoc.SelectSingleNode("/Table/Players/Player[@PlayerId='" + msg.playerId + "']/Hands/Hand[@HandId='" + msg.handId + "']");
@@ -211,7 +211,7 @@ namespace BlackJackSL.Web.BlackJack.XML
         public void PlayerSplit(SplitMessageToServer msg, Deck deck)
         {
             rwl.AcquireWriterLock(10000);
-            string filename = AppDomain.CurrentDomain.BaseDirectory.ToString() + @"/Table1.xml";
+            //string filename = AppDomain.CurrentDomain.BaseDirectory.ToString() + @"/Table1.xml";
             XmlDocument xmlDoc = new XmlDocument();
             xmlDoc.Load(filename);
             XmlNode hands = xmlDoc.SelectSingleNode("/Table/Players/Player[@PlayerId='" + msg.playerId + "']/Hands");
@@ -264,7 +264,7 @@ namespace BlackJackSL.Web.BlackJack.XML
         public void DealerRemove()
         {
             rwl.AcquireWriterLock(10000);
-            string filename = AppDomain.CurrentDomain.BaseDirectory.ToString() + @"/Table1.xml";
+            //string filename = AppDomain.CurrentDomain.BaseDirectory.ToString() + @"/Table1.xml";
             XmlDocument xmlDoc = new XmlDocument();
             xmlDoc.Load(filename);
             XmlNodeList dealerCards = xmlDoc.SelectNodes("/Table/Dealer/DealerCards/Card");
@@ -278,7 +278,7 @@ namespace BlackJackSL.Web.BlackJack.XML
 
         public XmlDocument GetXmlDoc()
         {
-            string filename = AppDomain.CurrentDomain.BaseDirectory.ToString() + @"/Table1.xml";
+            //string filename = AppDomain.CurrentDomain.BaseDirectory.ToString() + @"/Table1.xml";
             XmlDocument xmlDoc = new XmlDocument();
             xmlDoc.Load(filename);
             return xmlDoc;
