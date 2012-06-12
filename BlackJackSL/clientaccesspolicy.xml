@@ -1,0 +1,4 @@
+﻿<cross-domain-policy>
+    <allow-access-from domain="*"/>
+    <allow-http-request-headers-from domain="*" headers="SOAPAction"/>
+</cross-domain-policy>
