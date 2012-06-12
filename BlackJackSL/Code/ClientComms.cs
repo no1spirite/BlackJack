@@ -43,8 +43,9 @@ namespace BlackJackSL.Code
         public ClientComms()
         {
             //string endPoint = "http://192.168.1.10/blackjack/";
-            string endPoint = "http://localhost:57957/";
+            //string endPoint = "http://localhost/BlackJackSL.Web/";
             //string endPoint = "http://www.funnymoneycasino.net/";
+            string endPoint = "http://blackjack.apphb.com/";
 
             gameReceiver = new BlackJackDuplexServiceClient(binding, new EndpointAddress(endPoint + "blackjack/BlackJackService.svc"));
             gameReceiver.SendToClientReceived += new EventHandler<BlackJackSendToClientReceivedEventArgs>(blackJackReceiver_SendToClientReceived);

@@ -73,11 +73,15 @@
     <Content Include="BlackJackSLTestPage.html" />
     <Content Include="BlackJack\BlackJackService.svc" />
     <Content Include="Chat\ChatService.svc" />
-    <Content Include="clientaccesspolicy.xml" />
+    <Content Include="clientaccesspolicy.xml">
+      <SubType>Designer</SubType>
+    </Content>
     <Content Include="ClientBin\BlackJackSL.xap" />
     <Content Include="Default.aspx" />
     <Content Include="Silverlight.js" />
-    <Content Include="Web.config" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="BlackJack\BlackJackService.cs" />

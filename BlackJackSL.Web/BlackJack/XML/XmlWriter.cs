@@ -15,7 +15,8 @@ namespace BlackJackSL.Web.BlackJack.XML
     public class XmlWriter
     {
         ReaderWriterLock rwl = new ReaderWriterLock();
-        string filename = @"/Table1.xml";
+        //string filename = @"/Table1.xml";
+        string filename = AppDomain.CurrentDomain.BaseDirectory.ToString() + @"/Table1.xml";
         public XmlWriter()
         {
             //string filename = AppDomain.CurrentDomain.BaseDirectory.ToString() + @"/Table1.xml";
