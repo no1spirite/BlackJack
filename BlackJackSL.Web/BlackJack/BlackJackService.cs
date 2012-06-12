@@ -10,8 +10,11 @@ using XmlWriter=BlackJackSL.Web.BlackJack.XML.XmlWriter;
 
 namespace BlackJackSL.Web.BlackJack
 {
+    using System.ServiceModel;
+
     public class BlackJackServiceFactory : DuplexServiceFactory<BlackJackService> { }
 
+    [ServiceBehavior(AddressFilterMode = AddressFilterMode.Any)]
     public class BlackJackService : DuplexService
     {
         //Base class (DuplexService) keeps track of all connected chatters
