@@ -25,8 +25,9 @@ namespace BlackJackSL.Web.BlackJack.XML
             {
                 xmlDoc.Load(filename);
             }
-            catch (System.IO.FileNotFoundException)
+            catch (System.IO.FileNotFoundException ex)
             {
+                Console.WriteLine(ex);
                 XmlTextWriter xmlWriter = new XmlTextWriter(filename, System.Text.Encoding.UTF8);
                 xmlWriter.Formatting = Formatting.Indented;
                 xmlWriter.WriteProcessingInstruction("xml", "version='1.0' encoding='UTF-8'");
