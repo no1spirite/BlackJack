@@ -20,14 +20,14 @@
     <ServiceContractMappings />
   </ClientOptions>
   <MetadataSources>
-    <MetadataSource Address="http://localhost:57957/Chat/ChatService.svc/mex" Protocol="mex" SourceId="1" />
+    <MetadataSource Address="http://localhost/BlackJackSL.Web/Chat/ChatService.svc/mex" Protocol="mex" SourceId="1" />
   </MetadataSources>
   <Metadata>
-    <MetadataFile FileName="service.wsdl" MetadataType="Wsdl" ID="d7509983-9958-4b45-9232-9fed7d9c210f" SourceId="1" SourceUrl="http://localhost:57957/Chat/ChatService.svc/mex" />
-    <MetadataFile FileName="service.xsd" MetadataType="Schema" ID="0d1a826c-ab27-4da6-adab-5b18777f6b84" SourceId="1" SourceUrl="http://localhost:57957/Chat/ChatService.svc/mex" />
-    <MetadataFile FileName="service1.xsd" MetadataType="Schema" ID="b54c0895-62ba-4545-b911-8e8bc4d9268c" SourceId="1" SourceUrl="http://localhost:57957/Chat/ChatService.svc/mex" />
-    <MetadataFile FileName="duplex.xsd" MetadataType="Schema" ID="f06a5645-ee1b-4b29-ad7e-109ef38055d5" SourceId="1" SourceUrl="http://localhost:57957/Chat/ChatService.svc/mex" />
-    <MetadataFile FileName="BlackJackSL.Web.Chat.xsd" MetadataType="Schema" ID="d1b7ed37-5115-4897-8f6a-70554aab5094" SourceId="1" SourceUrl="http://localhost:57957/Chat/ChatService.svc/mex" />
+    <MetadataFile FileName="service1.wsdl" MetadataType="Wsdl" ID="aebfa38a-56c6-44c1-85d1-305bc9082424" SourceId="1" SourceUrl="http://localhost/BlackJackSL.Web/Chat/ChatService.svc/mex" />
+    <MetadataFile FileName="service2.xsd" MetadataType="Schema" ID="ade42331-26c6-4860-b230-1eef9bf2bdb0" SourceId="1" SourceUrl="http://localhost/BlackJackSL.Web/Chat/ChatService.svc/mex" />
+    <MetadataFile FileName="service21.xsd" MetadataType="Schema" ID="f8da83b0-c0e7-44d6-bf51-02da428f4cbc" SourceId="1" SourceUrl="http://localhost/BlackJackSL.Web/Chat/ChatService.svc/mex" />
+    <MetadataFile FileName="duplex1.xsd" MetadataType="Schema" ID="d5edf153-5759-4324-97c3-cfeb09f434f5" SourceId="1" SourceUrl="http://localhost/BlackJackSL.Web/Chat/ChatService.svc/mex" />
+    <MetadataFile FileName="BlackJackSL.Web.Chat1.xsd" MetadataType="Schema" ID="916c09e4-80b5-41a6-a715-01a73cb85e10" SourceId="1" SourceUrl="http://localhost/BlackJackSL.Web/Chat/ChatService.svc/mex" />
   </Metadata>
   <Extensions>
     <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />

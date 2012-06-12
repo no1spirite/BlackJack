@@ -22,16 +22,17 @@ namespace BlackJackSL.BlackJackService {
     [System.Runtime.Serialization.KnownTypeAttribute(typeof(BlackJackSL.BlackJackService.GameDisconnectMessage))]
     [System.Runtime.Serialization.KnownTypeAttribute(typeof(BlackJackSL.BlackJackService.StandMessageToServer))]
     [System.Runtime.Serialization.KnownTypeAttribute(typeof(BlackJackSL.BlackJackService.StandMessageFromServer))]
-    [System.Runtime.Serialization.KnownTypeAttribute(typeof(BlackJackSL.BlackJackService.BetMessageToServer))]
-    [System.Runtime.Serialization.KnownTypeAttribute(typeof(BlackJackSL.BlackJackService.BetMessageFromServer))]
     [System.Runtime.Serialization.KnownTypeAttribute(typeof(BlackJackSL.BlackJackService.JoinGameMessageToServer))]
     [System.Runtime.Serialization.KnownTypeAttribute(typeof(BlackJackSL.BlackJackService.RemovePlayerMessageFromServer))]
     [System.Runtime.Serialization.KnownTypeAttribute(typeof(BlackJackSL.BlackJackService.ClearPlayersMessageFromServer))]
-    [System.Runtime.Serialization.KnownTypeAttribute(typeof(BlackJackSL.BlackJackService.JoinGameMessageFromServer))]
     [System.Runtime.Serialization.KnownTypeAttribute(typeof(BlackJackSL.BlackJackService.AddPlayerMessageFromServer))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(BlackJackSL.BlackJackService.JoinGameMessageFromServer))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(BlackJackSL.BlackJackService.BetMessageToServer))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(BlackJackSL.BlackJackService.BetMessageFromServer))]
     [System.Runtime.Serialization.KnownTypeAttribute(typeof(BlackJackSL.BlackJackService.DealMessageToServer))]
     [System.Runtime.Serialization.KnownTypeAttribute(typeof(BlackJackSL.BlackJackService.DealMessageFromServer))]
     [System.Runtime.Serialization.KnownTypeAttribute(typeof(BlackJackSL.BlackJackService.RemovePlayerMessageToServer))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(BlackJackSL.BlackJackService.ClearDealerMessageFromServer))]
     [System.Runtime.Serialization.KnownTypeAttribute(typeof(BlackJackSL.BlackJackService.HitMessageToServer))]
     [System.Runtime.Serialization.KnownTypeAttribute(typeof(BlackJackSL.BlackJackService.HitMessageFromServer))]
     [System.Runtime.Serialization.KnownTypeAttribute(typeof(BlackJackSL.BlackJackService.DoubleMessageToServer))]
@@ -41,7 +42,6 @@ namespace BlackJackSL.BlackJackService {
     [System.Runtime.Serialization.KnownTypeAttribute(typeof(BlackJackSL.BlackJackService.ClearPlayersMessageToServer))]
     [System.Runtime.Serialization.KnownTypeAttribute(typeof(BlackJackSL.BlackJackService.FinishedDealingMessageToServer))]
     [System.Runtime.Serialization.KnownTypeAttribute(typeof(BlackJackSL.BlackJackService.FinishedDealingMessageFromServer))]
-    [System.Runtime.Serialization.KnownTypeAttribute(typeof(BlackJackSL.BlackJackService.ClearDealerMessageFromServer))]
     [System.Runtime.Serialization.KnownTypeAttribute(typeof(BlackJackSL.BlackJackService.LeaveGameMessageToServer))]
     [System.Runtime.Serialization.KnownTypeAttribute(typeof(BlackJackSL.BlackJackService.LeaveGameMessageFromServer))]
     [System.Runtime.Serialization.KnownTypeAttribute(typeof(BlackJackSL.BlackJackService.PlayerAlreadyExistsMessageFromServer))]
@@ -115,6 +115,85 @@ namespace BlackJackSL.BlackJackService {
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
+    [System.Runtime.Serialization.DataContractAttribute(Name="JoinGameMessageToServer", Namespace="http://schemas.datacontract.org/2004/07/BlackJackSL.Web.BlackJack")]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(BlackJackSL.BlackJackService.RemovePlayerMessageFromServer))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(BlackJackSL.BlackJackService.ClearPlayersMessageFromServer))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(BlackJackSL.BlackJackService.AddPlayerMessageFromServer))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(BlackJackSL.BlackJackService.JoinGameMessageFromServer))]
+    public partial class JoinGameMessageToServer : BlackJackSL.BlackJackService.DuplexMessage {
+        
+        private string nicknameField;
+        
+        private int playerIdField;
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string nickname {
+            get {
+                return this.nicknameField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.nicknameField, value) != true)) {
+                    this.nicknameField = value;
+                    this.RaisePropertyChanged("nickname");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public int playerId {
+            get {
+                return this.playerIdField;
+            }
+            set {
+                if ((this.playerIdField.Equals(value) != true)) {
+                    this.playerIdField = value;
+                    this.RaisePropertyChanged("playerId");
+                }
+            }
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
+    [System.Runtime.Serialization.DataContractAttribute(Name="RemovePlayerMessageFromServer", Namespace="http://schemas.datacontract.org/2004/07/BlackJackSL.Web.BlackJack")]
+    public partial class RemovePlayerMessageFromServer : BlackJackSL.BlackJackService.JoinGameMessageToServer {
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
+    [System.Runtime.Serialization.DataContractAttribute(Name="ClearPlayersMessageFromServer", Namespace="http://schemas.datacontract.org/2004/07/BlackJackSL.Web.BlackJack")]
+    public partial class ClearPlayersMessageFromServer : BlackJackSL.BlackJackService.JoinGameMessageToServer {
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
+    [System.Runtime.Serialization.DataContractAttribute(Name="AddPlayerMessageFromServer", Namespace="http://schemas.datacontract.org/2004/07/BlackJackSL.Web.BlackJack")]
+    public partial class AddPlayerMessageFromServer : BlackJackSL.BlackJackService.JoinGameMessageToServer {
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
+    [System.Runtime.Serialization.DataContractAttribute(Name="JoinGameMessageFromServer", Namespace="http://schemas.datacontract.org/2004/07/BlackJackSL.Web.BlackJack")]
+    public partial class JoinGameMessageFromServer : BlackJackSL.BlackJackService.JoinGameMessageToServer {
+        
+        private string xmlDocField;
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string xmlDoc {
+            get {
+                return this.xmlDocField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.xmlDocField, value) != true)) {
+                    this.xmlDocField = value;
+                    this.RaisePropertyChanged("xmlDoc");
+                }
+            }
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
     [System.Runtime.Serialization.DataContractAttribute(Name="BetMessageToServer", Namespace="http://schemas.datacontract.org/2004/07/BlackJackSL.Web.BlackJack")]
     [System.Runtime.Serialization.KnownTypeAttribute(typeof(BlackJackSL.BlackJackService.BetMessageFromServer))]
     public partial class BetMessageToServer : BlackJackSL.BlackJackService.DuplexMessage {
@@ -169,85 +248,6 @@ namespace BlackJackSL.BlackJackService {
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
     [System.Runtime.Serialization.DataContractAttribute(Name="BetMessageFromServer", Namespace="http://schemas.datacontract.org/2004/07/BlackJackSL.Web.BlackJack")]
     public partial class BetMessageFromServer : BlackJackSL.BlackJackService.BetMessageToServer {
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
-    [System.Runtime.Serialization.DataContractAttribute(Name="JoinGameMessageToServer", Namespace="http://schemas.datacontract.org/2004/07/BlackJackSL.Web.BlackJack")]
-    [System.Runtime.Serialization.KnownTypeAttribute(typeof(BlackJackSL.BlackJackService.RemovePlayerMessageFromServer))]
-    [System.Runtime.Serialization.KnownTypeAttribute(typeof(BlackJackSL.BlackJackService.ClearPlayersMessageFromServer))]
-    [System.Runtime.Serialization.KnownTypeAttribute(typeof(BlackJackSL.BlackJackService.JoinGameMessageFromServer))]
-    [System.Runtime.Serialization.KnownTypeAttribute(typeof(BlackJackSL.BlackJackService.AddPlayerMessageFromServer))]
-    public partial class JoinGameMessageToServer : BlackJackSL.BlackJackService.DuplexMessage {
-        
-        private string nicknameField;
-        
-        private int playerIdField;
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public string nickname {
-            get {
-                return this.nicknameField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.nicknameField, value) != true)) {
-                    this.nicknameField = value;
-                    this.RaisePropertyChanged("nickname");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public int playerId {
-            get {
-                return this.playerIdField;
-            }
-            set {
-                if ((this.playerIdField.Equals(value) != true)) {
-                    this.playerIdField = value;
-                    this.RaisePropertyChanged("playerId");
-                }
-            }
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
-    [System.Runtime.Serialization.DataContractAttribute(Name="RemovePlayerMessageFromServer", Namespace="http://schemas.datacontract.org/2004/07/BlackJackSL.Web.BlackJack")]
-    public partial class RemovePlayerMessageFromServer : BlackJackSL.BlackJackService.JoinGameMessageToServer {
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
-    [System.Runtime.Serialization.DataContractAttribute(Name="ClearPlayersMessageFromServer", Namespace="http://schemas.datacontract.org/2004/07/BlackJackSL.Web.BlackJack")]
-    public partial class ClearPlayersMessageFromServer : BlackJackSL.BlackJackService.JoinGameMessageToServer {
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
-    [System.Runtime.Serialization.DataContractAttribute(Name="JoinGameMessageFromServer", Namespace="http://schemas.datacontract.org/2004/07/BlackJackSL.Web.BlackJack")]
-    public partial class JoinGameMessageFromServer : BlackJackSL.BlackJackService.JoinGameMessageToServer {
-        
-        private string xmlDocField;
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public string xmlDoc {
-            get {
-                return this.xmlDocField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.xmlDocField, value) != true)) {
-                    this.xmlDocField = value;
-                    this.RaisePropertyChanged("xmlDoc");
-                }
-            }
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
-    [System.Runtime.Serialization.DataContractAttribute(Name="AddPlayerMessageFromServer", Namespace="http://schemas.datacontract.org/2004/07/BlackJackSL.Web.BlackJack")]
-    public partial class AddPlayerMessageFromServer : BlackJackSL.BlackJackService.JoinGameMessageToServer {
     }
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
@@ -327,6 +327,12 @@ namespace BlackJackSL.BlackJackService {
                 }
             }
         }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
+    [System.Runtime.Serialization.DataContractAttribute(Name="ClearDealerMessageFromServer", Namespace="http://schemas.datacontract.org/2004/07/BlackJackSL.Web.BlackJack")]
+    public partial class ClearDealerMessageFromServer : BlackJackSL.BlackJackService.DuplexMessage {
     }
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
@@ -550,12 +556,6 @@ namespace BlackJackSL.BlackJackService {
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
     [System.Runtime.Serialization.DataContractAttribute(Name="FinishedDealingMessageFromServer", Namespace="http://schemas.datacontract.org/2004/07/BlackJackSL.Web.BlackJack")]
     public partial class FinishedDealingMessageFromServer : BlackJackSL.BlackJackService.FinishedDealingMessageToServer {
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
-    [System.Runtime.Serialization.DataContractAttribute(Name="ClearDealerMessageFromServer", Namespace="http://schemas.datacontract.org/2004/07/BlackJackSL.Web.BlackJack")]
-    public partial class ClearDealerMessageFromServer : BlackJackSL.BlackJackService.DuplexMessage {
     }
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
