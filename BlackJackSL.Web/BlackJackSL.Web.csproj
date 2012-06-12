@@ -77,6 +77,7 @@
       <SubType>Designer</SubType>
     </Content>
     <Content Include="ClientBin\BlackJackSL.xap" />
+    <Content Include="crossdomain.xml" />
     <Content Include="Default.aspx" />
     <Content Include="Silverlight.js" />
     <Content Include="Web.config">
