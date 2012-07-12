@@ -13,7 +13,7 @@
       <xsd:import namespace="http://tempuri.org/" />
       <xsd:import namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
       <xsd:import namespace="http://samples.microsoft.com/silverlight2/duplex" />
-      <xsd:import namespace="http://schemas.datacontract.org/2004/07/BlackJackSL.Web.Chat" />
+      <xsd:import namespace="http://schemas.datacontract.org/2004/07/BlackJack.Services.Chat" />
     </xsd:schema>
   </wsdl:types>
   <wsdl:message name="DuplexService_SendToService_InputMessage">
@@ -48,9 +48,9 @@
   </wsdl:binding>
   <wsdl:service name="ChatService">
     <wsdl:port name="CustomBinding_DuplexService" binding="tns:CustomBinding_DuplexService">
-      <soap12:address location="http://localhost:57957/Chat/ChatService.svc" />
+      <soap12:address location="http://localhost:19080/chat/ChatService.svc" />
       <wsa10:EndpointReference>
-        <wsa10:Address>http://localhost:57957/Chat/ChatService.svc</wsa10:Address>
+        <wsa10:Address>http://localhost:19080/chat/ChatService.svc</wsa10:Address>
       </wsa10:EndpointReference>
     </wsdl:port>
   </wsdl:service>

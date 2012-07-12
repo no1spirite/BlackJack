@@ -18,13 +18,13 @@ namespace BlackJackSL.ChatService {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
     [System.Runtime.Serialization.DataContractAttribute(Name="DuplexMessage", Namespace="http://samples.microsoft.com/silverlight2/duplex")]
-    [System.Runtime.Serialization.KnownTypeAttribute(typeof(BlackJackSL.ChatService.DisconnectMessage))]
     [System.Runtime.Serialization.KnownTypeAttribute(typeof(BlackJackSL.ChatService.ConnectMessage))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(BlackJackSL.ChatService.DisconnectMessage))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(BlackJackSL.ChatService.JoinChatMessage))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(BlackJackSL.ChatService.StockTickerMessage))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(BlackJackSL.ChatService.LeaveChatMessage))]
     [System.Runtime.Serialization.KnownTypeAttribute(typeof(BlackJackSL.ChatService.TextChatMessageToServer))]
     [System.Runtime.Serialization.KnownTypeAttribute(typeof(BlackJackSL.ChatService.TextChatMessageFromServer))]
-    [System.Runtime.Serialization.KnownTypeAttribute(typeof(BlackJackSL.ChatService.StockTickerMessage))]
-    [System.Runtime.Serialization.KnownTypeAttribute(typeof(BlackJackSL.ChatService.JoinChatMessage))]
-    [System.Runtime.Serialization.KnownTypeAttribute(typeof(BlackJackSL.ChatService.LeaveChatMessage))]
     public partial class DuplexMessage : object, System.ComponentModel.INotifyPropertyChanged {
         
         public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
@@ -39,57 +39,20 @@ namespace BlackJackSL.ChatService {
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
-    [System.Runtime.Serialization.DataContractAttribute(Name="DisconnectMessage", Namespace="http://samples.microsoft.com/silverlight2/duplex")]
-    public partial class DisconnectMessage : BlackJackSL.ChatService.DuplexMessage {
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
     [System.Runtime.Serialization.DataContractAttribute(Name="ConnectMessage", Namespace="http://samples.microsoft.com/silverlight2/duplex")]
     public partial class ConnectMessage : BlackJackSL.ChatService.DuplexMessage {
     }
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
-    [System.Runtime.Serialization.DataContractAttribute(Name="TextChatMessageToServer", Namespace="http://schemas.datacontract.org/2004/07/BlackJackSL.Web.Chat")]
-    [System.Runtime.Serialization.KnownTypeAttribute(typeof(BlackJackSL.ChatService.TextChatMessageFromServer))]
-    public partial class TextChatMessageToServer : BlackJackSL.ChatService.DuplexMessage {
-        
-        private string textField;
-        
-        private int textColorField;
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public string text {
-            get {
-                return this.textField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.textField, value) != true)) {
-                    this.textField = value;
-                    this.RaisePropertyChanged("text");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public int textColor {
-            get {
-                return this.textColorField;
-            }
-            set {
-                if ((this.textColorField.Equals(value) != true)) {
-                    this.textColorField = value;
-                    this.RaisePropertyChanged("textColor");
-                }
-            }
-        }
+    [System.Runtime.Serialization.DataContractAttribute(Name="DisconnectMessage", Namespace="http://samples.microsoft.com/silverlight2/duplex")]
+    public partial class DisconnectMessage : BlackJackSL.ChatService.DuplexMessage {
     }
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
-    [System.Runtime.Serialization.DataContractAttribute(Name="TextChatMessageFromServer", Namespace="http://schemas.datacontract.org/2004/07/BlackJackSL.Web.Chat")]
-    public partial class TextChatMessageFromServer : BlackJackSL.ChatService.TextChatMessageToServer {
+    [System.Runtime.Serialization.DataContractAttribute(Name="JoinChatMessage", Namespace="http://schemas.datacontract.org/2004/07/BlackJack.Services.Chat")]
+    public partial class JoinChatMessage : BlackJackSL.ChatService.DuplexMessage {
         
         private string nicknameField;
         
@@ -109,7 +72,7 @@ namespace BlackJackSL.ChatService {
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
-    [System.Runtime.Serialization.DataContractAttribute(Name="StockTickerMessage", Namespace="http://schemas.datacontract.org/2004/07/BlackJackSL.Web.Chat")]
+    [System.Runtime.Serialization.DataContractAttribute(Name="StockTickerMessage", Namespace="http://schemas.datacontract.org/2004/07/BlackJack.Services.Chat")]
     public partial class StockTickerMessage : BlackJackSL.ChatService.DuplexMessage {
         
         private string ChangeField;
@@ -220,8 +183,8 @@ namespace BlackJackSL.ChatService {
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
-    [System.Runtime.Serialization.DataContractAttribute(Name="JoinChatMessage", Namespace="http://schemas.datacontract.org/2004/07/BlackJackSL.Web.Chat")]
-    public partial class JoinChatMessage : BlackJackSL.ChatService.DuplexMessage {
+    [System.Runtime.Serialization.DataContractAttribute(Name="LeaveChatMessage", Namespace="http://schemas.datacontract.org/2004/07/BlackJack.Services.Chat")]
+    public partial class LeaveChatMessage : BlackJackSL.ChatService.DuplexMessage {
         
         private string nicknameField;
         
@@ -241,8 +204,45 @@ namespace BlackJackSL.ChatService {
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
-    [System.Runtime.Serialization.DataContractAttribute(Name="LeaveChatMessage", Namespace="http://schemas.datacontract.org/2004/07/BlackJackSL.Web.Chat")]
-    public partial class LeaveChatMessage : BlackJackSL.ChatService.DuplexMessage {
+    [System.Runtime.Serialization.DataContractAttribute(Name="TextChatMessageToServer", Namespace="http://schemas.datacontract.org/2004/07/BlackJack.Services.Chat")]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(BlackJackSL.ChatService.TextChatMessageFromServer))]
+    public partial class TextChatMessageToServer : BlackJackSL.ChatService.DuplexMessage {
+        
+        private string textField;
+        
+        private int textColorField;
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string text {
+            get {
+                return this.textField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.textField, value) != true)) {
+                    this.textField = value;
+                    this.RaisePropertyChanged("text");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public int textColor {
+            get {
+                return this.textColorField;
+            }
+            set {
+                if ((this.textColorField.Equals(value) != true)) {
+                    this.textColorField = value;
+                    this.RaisePropertyChanged("textColor");
+                }
+            }
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
+    [System.Runtime.Serialization.DataContractAttribute(Name="TextChatMessageFromServer", Namespace="http://schemas.datacontract.org/2004/07/BlackJack.Services.Chat")]
+    public partial class TextChatMessageFromServer : BlackJackSL.ChatService.TextChatMessageToServer {
         
         private string nicknameField;
         

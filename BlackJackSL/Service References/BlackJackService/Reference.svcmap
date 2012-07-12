@@ -20,15 +20,15 @@
     <ServiceContractMappings />
   </ClientOptions>
   <MetadataSources>
-    <MetadataSource Address="http://localhost:57957/BlackJack/BlackJackService.svc/mex" Protocol="mex" SourceId="1" />
+    <MetadataSource Address="http://localhost:19080/BlackJack/BlackJackService.svc/mex" Protocol="mex" SourceId="1" />
   </MetadataSources>
   <Metadata>
-    <MetadataFile FileName="service.wsdl" MetadataType="Wsdl" ID="d042c821-2767-4277-b304-46eb7201bc76" SourceId="1" SourceUrl="http://localhost:57957/BlackJack/BlackJackService.svc/mex" />
-    <MetadataFile FileName="service.xsd" MetadataType="Schema" ID="5f91d231-2283-454a-89f5-7b08c24af758" SourceId="1" SourceUrl="http://localhost:57957/BlackJack/BlackJackService.svc/mex" />
-    <MetadataFile FileName="service1.xsd" MetadataType="Schema" ID="a599a245-c39e-489c-baae-33cc7e284afa" SourceId="1" SourceUrl="http://localhost:57957/BlackJack/BlackJackService.svc/mex" />
-    <MetadataFile FileName="duplex.xsd" MetadataType="Schema" ID="17753a67-8fc8-4eb2-ada5-f8e73470f745" SourceId="1" SourceUrl="http://localhost:57957/BlackJack/BlackJackService.svc/mex" />
-    <MetadataFile FileName="BlackJackSL.Web.BlackJack.xsd" MetadataType="Schema" ID="b5352220-e588-4186-b305-c0120604e931" SourceId="1" SourceUrl="http://localhost:57957/BlackJack/BlackJackService.svc/mex" />
-    <MetadataFile FileName="BlackJackSL.Web.BlackJack.Objects.xsd" MetadataType="Schema" ID="fcec5ddb-af59-4b78-80f9-b518b2c6c318" SourceId="1" SourceUrl="http://localhost:57957/BlackJack/BlackJackService.svc/mex" />
+    <MetadataFile FileName="service1.wsdl" MetadataType="Wsdl" ID="16d34822-37cd-4c07-9a95-99dac60af5e0" SourceId="1" SourceUrl="http://localhost:19080/BlackJack/BlackJackService.svc/mex" />
+    <MetadataFile FileName="service2.xsd" MetadataType="Schema" ID="89b1e878-ecd2-4e8d-ad88-6f2d8eeb1878" SourceId="1" SourceUrl="http://localhost:19080/BlackJack/BlackJackService.svc/mex" />
+    <MetadataFile FileName="service21.xsd" MetadataType="Schema" ID="a4af4aec-0710-4c1c-aaf7-6906ac0da56c" SourceId="1" SourceUrl="http://localhost:19080/BlackJack/BlackJackService.svc/mex" />
+    <MetadataFile FileName="duplex1.xsd" MetadataType="Schema" ID="6b2ad443-6a9c-46e1-80c1-b99fcd7d018c" SourceId="1" SourceUrl="http://localhost:19080/BlackJack/BlackJackService.svc/mex" />
+    <MetadataFile FileName="BlackJack.Services.BlackJack.xsd" MetadataType="Schema" ID="a19c0ed6-c1c4-4dac-a1cc-6076257c2581" SourceId="1" SourceUrl="http://localhost:19080/BlackJack/BlackJackService.svc/mex" />
+    <MetadataFile FileName="BlackJack.Services.BlackJack.Objects.xsd" MetadataType="Schema" ID="3ca3de02-6f5a-4d6d-a14c-673f09424e29" SourceId="1" SourceUrl="http://localhost:19080/BlackJack/BlackJackService.svc/mex" />
   </Metadata>
   <Extensions>
     <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
