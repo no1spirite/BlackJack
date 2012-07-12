@@ -4,8 +4,11 @@ using System.Threading;
 
 namespace BlackJackSL.Web.Chat
 {
+    using System.ServiceModel;
+
     public class ChatServiceFactory : DuplexServiceFactory<ChatService> {}
 
+    [ServiceBehavior(AddressFilterMode = AddressFilterMode.Any)]
     public class ChatService : DuplexService
     {
         //Base class (DuplexService) keeps track of all connected chatters
